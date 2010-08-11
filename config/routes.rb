@@ -8,6 +8,8 @@ Hedemi::Application.routes.draw do
   get "pages/vision"
 
   get "pages/mitwirken"
+  
+  get "pages/agb"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
