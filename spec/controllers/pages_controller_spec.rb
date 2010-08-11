@@ -3,6 +3,12 @@ require 'spec_helper'
 describe PagesController do
   render_views
 
+  before(:each) do
+    @base_title = "Herrscher des Mittelalters"
+  end
+
+
+
   describe "GET 'impressum'" do
     it "should be successful" do
       get 'impressum'
@@ -12,7 +18,7 @@ describe PagesController do
     it "should have the right title" do
       get 'impressum'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Impressum")
+                        :content => @base_title + " | Impressum")
     end
   end
 
@@ -25,7 +31,7 @@ describe PagesController do
     it "should have the right title" do
       get 'haftungsausschluss'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Haftungsausschluss")
+                        :content => @base_title + " | Haftungsausschluss")
     end
   end
 
@@ -38,7 +44,7 @@ describe PagesController do
     it "should have the right title" do
       get 'kontakt'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Kontakt")
+                        :content => @base_title + " | Kontakt")
     end
   end
 
@@ -51,7 +57,7 @@ describe PagesController do
     it "should have the right title" do
       get 'vision'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Vision")
+                        :content => @base_title + " | Vision")
     end
   end
 
@@ -64,7 +70,7 @@ describe PagesController do
     it "should have the right title" do
       get 'mitwirken'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Mitwirken")
+                        :content => @base_title + " | Mitwirken")
     end
   end
 
@@ -77,7 +83,7 @@ describe PagesController do
     it "should have the right title" do
       get 'agb'
       response.should have_selector("title",
-                        :content => "Herrscher des Mittelalters | Allgemeine Geschaeftsbedingungen")
+                        :content => @base_title + " | Allgemeine Geschaeftsbedingungen")
     end
   end
 
