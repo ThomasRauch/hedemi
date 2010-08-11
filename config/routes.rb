@@ -1,4 +1,14 @@
 Hedemi::Application.routes.draw do
+  get "pages/impressum"
+
+  get "pages/haftungsausschluss"
+
+  get "pages/kontakt"
+
+  get "pages/vision"
+
+  get "pages/mitwirken"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
