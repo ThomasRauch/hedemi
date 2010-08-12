@@ -1,15 +1,12 @@
 Hedemi::Application.routes.draw do
-  get "pages/impressum"
 
-  get "pages/haftungsausschluss"
+  match '/impressum', :to => 'pages#impressum'
+  match '/haftungsausschluss', :to => 'pages#haftungsausschluss'
+  match '/kontakt', :to => 'pages#kontakt'
+  match '/vision', :to => 'pages#vision'
+  match '/mitwirken', :to => 'pages#mitwirken'
+  match '/agb', :to => 'pages#agb'
 
-  get "pages/kontakt"
-
-  get "pages/vision"
-
-  get "pages/mitwirken"
-  
-  get "pages/agb"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
