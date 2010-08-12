@@ -1,11 +1,14 @@
 Hedemi::Application.routes.draw do
 
+  get "users/new"
+
   match '/impressum', :to => 'pages#impressum'
   match '/haftungsausschluss', :to => 'pages#haftungsausschluss'
   match '/kontakt', :to => 'pages#kontakt'
   match '/vision', :to => 'pages#vision'
   match '/mitwirken', :to => 'pages#mitwirken'
   match '/agb', :to => 'pages#agb'
+  match '/registrieren', :to => 'users#new'
 
 
   # The priority is based upon order of creation:

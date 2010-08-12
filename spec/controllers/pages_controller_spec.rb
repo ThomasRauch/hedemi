@@ -18,7 +18,7 @@ describe PagesController do
     it "should have the right title" do
       get 'impressum'
       response.should have_selector("title",
-                        :content => @base_title + " | Impressum")
+                        :content => "Impressum | " + @base_title)
     end
   end
 
@@ -31,7 +31,7 @@ describe PagesController do
     it "should have the right title" do
       get 'haftungsausschluss'
       response.should have_selector("title",
-                        :content => @base_title + " | Haftungsausschluss")
+                        :content => "Haftungsausschluss | " + @base_title)
     end
   end
 
@@ -44,7 +44,7 @@ describe PagesController do
     it "should have the right title" do
       get 'kontakt'
       response.should have_selector("title",
-                        :content => @base_title + " | Kontakt")
+                        :content => "Kontakt | " + @base_title)
     end
   end
 
@@ -57,7 +57,7 @@ describe PagesController do
     it "should have the right title" do
       get 'vision'
       response.should have_selector("title",
-                        :content => @base_title + " | Vision")
+                        :content => "Vision | " + @base_title)
     end
   end
 
@@ -70,7 +70,7 @@ describe PagesController do
     it "should have the right title" do
       get 'mitwirken'
       response.should have_selector("title",
-                        :content => @base_title + " | Mitwirken")
+                        :content => "Mitwirken | " + @base_title)
     end
   end
 
@@ -83,7 +83,7 @@ describe PagesController do
     it "should have the right title" do
       get 'agb'
       response.should have_selector("title",
-                        :content => @base_title + " | Allgemeine Geschaeftsbedingungen")
+                        :content => "Allgemeine Geschaeftsbedingungen | " + @base_title)
     end
   end
 
