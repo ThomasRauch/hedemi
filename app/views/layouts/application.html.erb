@@ -17,9 +17,9 @@
        <%= image_tag("hedemi.png", :alt => "Herrscher des Mittelalters", :class => "round") %>
         <nav class="round">
           <ul>
+            <li><%= link_to "Home", '#' %></li>
             <li><%= link_to "Anmelden", '#' %></li>
             <li><%= link_to "Vision", vision_path %></li>
-            <li><%= link_to "Kontakt", kontakt_path %></li>
             <li><%= link_to "Mitwirken", mitwirken_path %></li>
           </ul>
         </nav>
@@ -38,7 +38,7 @@
     </ul>
   </nav>
 </footer>
-
+<%= debug(params) if Rails.env.development? %>
     </div>
 </body>
 </html>

@@ -36,5 +36,26 @@ describe "LayoutLinks" do
     get '/registrieren'
     response.should have_selector('title', :content => "Registrieren")
   end
+  
+  
+  # checks if the links on the pages exists. Needs an algorithm to do that foreach existing page
+  it "agb page should have the right links on the layout" do
+    visit agb_path
+    click_link "Vision"
+    response.should have_selector('title', :content => "Vision")
+    #click_link "Registrieren"
+    #response.should have_selector('title', :content => "Registrieren")
+    click_link "Haftungsausschluss"
+    response.should have_selector('title', :content => "Haftungsausschluss")
+    #click_link "AGB"
+    #response.should have_selector('title', :content => "Allgemeine Geschaeftsbedingungen")
+    click_link "Impressum"
+    response.should have_selector('title', :content => "Impressum")
+    click_link "Mitwirken"
+    response.should have_selector('title', :content => "Mitwirken")
+    click_link "Kontakt"
+    response.should have_selector('title', :content => "Kontakt")
+  end
+
 end
 
