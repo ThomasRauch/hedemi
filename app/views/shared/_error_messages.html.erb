@@ -1,7 +1,6 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= @user.errors.count %> Fehler!</h2>
-    <p>Bitte füllen Sie folgende Felder mit validen Daten:</p>
+    <h2>Folgende Fehler sind aufgetreten:</h2><br />
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>

@@ -16,6 +16,8 @@ class UsersController < ApplicationController
       redirect_to @user
       flash[:success] = "Registrierung erfolgreich!"
     else
+      @user.password = ""
+      @user.password_confirmation = ""
       @title = "Registrieren"
       render 'new'
     end
